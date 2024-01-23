@@ -1,0 +1,32 @@
+<div class="custom-featured-product">
+  <h2>{{ section.settings.title }}</h2>
+  <img src="{{ section.settings.product_image | img_url: '500x' }}" alt="Featured Product">
+  <p>{{ section.settings.product_description }}</p>
+</div>
+
+{
+  "name": "Custom Featured Product",
+  "settings": [
+    {
+      "type": "text",
+      "label": "Title",
+      "id": "title"
+    },
+    {
+      "type": "image_picker",
+      "label": "Product Image",
+      "id": "product_image"
+    },
+    {
+      "type": "textarea",
+      "label": "Product Description",
+      "id": "product_description"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Default",
+      "category": "Custom"
+    }
+  ]
+}
